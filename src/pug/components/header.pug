@@ -1,0 +1,78 @@
+
+
+.site-header
+    .site-header__info
+        .container
+            .header-info
+                .header-info__main.header-info-main
+                    img(src='./images/svg/icon-i.svg').header-info-main__icon
+                    .header-info-main__text Производство и поставка теплообменного оборудования
+                a(href="#" data-scroll-target='consultation-section').header-info__ask.header-info-ask.js-scroll-button
+                    img(src='./images/svg/icon-ask.svg').header-info-ask__icon
+                    .header-info-ask__text Задать вопрос
+    .site-header__main
+        .container
+            .header
+                a(href="#").header__logo.header-logo
+                    img(src='./images/svg/icon-logo.svg').header-logo__icon
+                    .header-logo__text Cборочное производство FUNKE в Воронеже
+                .header__address.header-address
+                    img(src='./images/svg/icon-metka.svg').header-address__icon
+                    .header-address__text Воронеж <br/> проезд Монтажный, д. 3
+                .header__mob-menu-button
+                    button.mob-menu-button.js-mobile-menu-open
+                        img(src='./images/svg/icon-hamburger.svg').mob-menu-button__icon
+                .header__phone
+                    .header-phone
+                        .header-phone__text 8 (473) 212 ...
+                        button.header-phone__button
+                            img(src='./images/svg/icon-phone.svg').header-phone__icon
+                        .header-phone__overlay
+                        .header-phone__feedback.feedback-popup
+                            button.feedback-popup__close
+                            div.feedback-popup__phone
+                                a(href="tel:84732121205").feedback-phone-link.phone-pointer-events
+                                    img(src='./images/svg/icon-phone.svg').feedback-phone-link__icon
+                                    span.feedback-phone-link__text 8 (473) 212-12-05
+                            div.feedback-popup__phone
+                                a(href="tel:84732516496").feedback-phone-link.phone-pointer-events
+                                    img(src='./images/svg/icon-phone.svg').feedback-phone-link__icon
+                                    span.feedback-phone-link__text 8 (473) 251-64-96
+                            form.feedback-popup__form.feedback-popup-form
+                                .feedback-popup-form__line
+                                    .feedback-popup-form__line-title Ваше имя
+                                    .feedback-popup-form__line-content
+                                        input(type='text').st-input
+                                .feedback-popup-form__line
+                                    .feedback-popup-form__line-title Ваш телефон
+                                    .feedback-popup-form__line-content
+                                        input(type='text' placeholder='+7 (___) ___-__-__').st-input.js-inputmask-phone
+                                        p.feedback-popup-form__descr * Мы свяжемся с Вами по этому телефону  для консультации или составления сметы
+                                .feedback-popup-form__button
+                                    button.st-red-button Заказать звонок
+
+
+    .site-header__nav
+        .container
+            .main-nav
+                ul.main-nav__list.main-nav-list
+                    li.main-nav-list__item.nav-item
+                        .nav-item__link
+                            img(src='./images/svg/icon-hamburger.svg').nav-item__hamburger
+                            | Продукция
+                        .nav-item__dropdown.dropdown-menu
+                            a(href="#").dropdown-menu__link подраздел
+                            a(href="#").dropdown-menu__link подраздел
+                            a(href="#").dropdown-menu__link подраздел
+                            a(href="#").dropdown-menu__link подраздел
+                    li.main-nav-list__item.nav-item
+                        a(href="#").nav-item__link Ремонт и обслуживани
+                    li.main-nav-list__item.nav-item
+                        a(href="#").nav-item__link Пластины и уплотнения
+                    li.main-nav-list__item.nav-item
+                        a(href="#").nav-item__link O компании
+                    li.main-nav-list__item.nav-item
+                        a(href="#").nav-item__link Контакты
+                a(href='#' data-scroll-target='consultation-section').main-nav__calculation.js-scroll-button Расчет  теплообменника
+
+

@@ -1,0 +1,302 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+.icon
+    display: inline-block
+    vertical-align: middle
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+    appearance: none
+
++font-face('FuturaHeavy', '../fonts/FuturaPT-Heavy')
++font-face('FuturaBold', '../fonts/FuturaPT-Bold')
++font-face('FuturaBook', '../fonts/FuturaPT-Book')
++font-face('FuturaBookOblique', '../fonts/futuraptbookoblique')
+
+
+$fh: 'FuturaHeavy'
+$fbold: 'FuturaBold'
+$fbook: 'FuturaBook'
+$fbooko: 'FuturaBookOblique'
+$red: #ff0000
+
+
+body
+    font-size: 16px
+    background-color: #f2f2f2
+    position: relative
+    font-family: $fbook
+    color: #000
+
+.container
+    width: 60vw
+    padding: 0 20px
+    margin: 0 auto
+    &_header
+        width: 70vw
+        position: relative
+
+.body
+    &__canvas
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 10
+    &__page
+        position: relative
+        z-index: 20
+
+.section
+    position: relative
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    &__content
+        flex: 1
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+    &__header-links
+        position: absolute
+        left: 0
+        top: 0
+
+
+.links-list
+    display: flex
+    min-height: 4vw
+    align-items: center
+    &__section
+        margin-right: 1.5vw
+        &:last-child
+            margin-right: 0
+
+.title
+    font-size: 5.2vw
+    line-height: 1.5em
+    text-transform: uppercase
+    color: $red
+    font-family: $fbold
+    text-align: center
+    &_fz6-4vw
+        font-size: 6.5vw
+    &_fz1-6vw
+        font-size: 1.6vw
+    &_fz1-2vw
+        font-size: 1.2vw
+    &_fz1vw
+        font-size: 1vw 
+    &_black
+        color: #000
+    &_ttn
+        text-transform: none
+    &__red
+        color: $red
+    &_ta-left
+        text-align: left
+
+
+.section2-main
+    &__subtitle
+        margin-bottom: 1vw
+    &__info
+        margin-bottom: 2vw
+
+.button
+    text-transform: uppercase
+    text-decoration: none
+    width: 14vw
+    background-color: $red
+    font-family: $fh
+    font-size: 1.2vw
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 4vw
+    padding: 0.5vw
+    border: 0.3vw solid $red
+    transition: all 0.5s ease 0s
+    &_center
+        margin: 0 auto
+    &:hover
+        background-color: #fff
+        color: $red
+        border-color: #red
+    &:active
+        transition: all 0s ease 0s
+        border-width: 0.5vw
+        font-size: 1vw
+
+
+.grid-ul
+    column-count: 2
+    column-gap: 6vw
+    font-size: 1.5vw
+    list-style: none
+    margin-top: -1.5vw
+    line-height: 1.2em
+    &__li
+        padding-left: 1.5vw
+        padding-top: 1.5vw
+        position: relative
+        &:before
+            content: ''
+            width: 1vw
+            height: 1vw
+            position: absolute
+            left: 0
+            top: 1.9vw
+            background-color: $red
+
+
+.form
+    background: rgba(255,255,255,0.75)
+    padding: 2vw 1.5vw
+    display: flex
+    justify-content: space-between
+    font-size: 1.2vw
+    font-family: $fbook
+    &__section
+        width: 45%
+    &__line
+        margin-bottom: 3vw
+        &:last-child
+            margin-bottom: 0
+
+
+.form-line__info
+    margin-bottom: 1vw
+
+.st-input
+    width: 100%
+    font-size: 1.2vw
+    padding: 0.8vw
+    font-family: $fbooko
+    transition: all 0.5s ease 0s
+    border: 1px solid #000
+    font-style: italic
+    &:focus
+        border-color: $red
+
+.st-textarea
+    width: 100%
+    font-size: 1.2vw
+    padding: 0.8vw
+    height: 10vw
+    font-family: $fbooko
+    transition: all 0.5s ease 0s
+    border: 1px solid #000
+    font-style: italic
+    resize: none
+    &:focus
+        border-color: $red
+
+.logo-link
+    color: #000
+    font-size: 2.5vw
+    text-decoration: none
+    font-family: $fbook
+    text-transform: uppercase
+    transition: all 0.5s ease 0s
+    &__bold
+        font-family: $fbold
+    &:hover
+        color: $red
+
+
+.soc__item
+    margin-right: 0.7vw
+    color: #000
+    font-size: 1.5vw
+    text-decoration: none
+    font-family: $fbook
+    transition: all 0.5s ease 0s
+    &:last-child
+        margin-right: 0
+    &:hover
+        color: $red
+.section3-main
+    &__subtitle
+        margin-bottom: 3vw
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__content-left
+        width: 40%
+    &__content-right
+        width: 60%
+        padding-left: 4vw
+
+.info-box
+    background: rgba(255,255,255,0.75)
+    padding: 2vw
+    font-size: 0.8vw
+    &__title
+        text-align: left
+        margin-bottom: 0.1vw
+
+.info-box__section
+    margin-bottom: 2vw
+    &:last-child
+        margin-bottom: 0
+
+
+.list-ul
+    font-size: 0.8vw
+    list-style: none
+    &__li
+        position: relative
+        margin-bottom: 1vw
+        &:before
+            content: ''
+            width: 0.6vw
+            height: 0.6vw
+            position: absolute
+            left: -1.5vw
+            top: 0.35vw
+            background-color: $red
+        &:last-child
+            margin-bottom: 0
+
+.section4-main__title
+    margin-bottom: 1vw
+
+.section5-main
+    text-align: center
+    display: inline-block
+    &__title
+        color: $red
+        font-size: 10vw
+        margin-bottom: 6vw
+        display: block
+    &__footer
+        text-align: right
+
+.phone-mail
+    display: inline-block
+    text-align: left
+    &__mail
+        color: $red
+        font-family: $fbooko
+        font-style: italic
+        font-size: 1vw
+        text-transform: uppercase
+        text-decoration: none
+    &__phone
+        text-decoration: none
+        font-size: 2vw
+        margin-left: 2vw
+        color: #000
+        font-family: $fbold
+        display: block
