@@ -41,10 +41,11 @@ body
     &_header
         width: 70vw
         position: relative
+        min-height: 4vw
 
 .body
     &__canvas
-        position: absolute
+        position: fixed
         left: 0
         top: 0
         width: 100%
@@ -53,6 +54,8 @@ body
     &__page
         position: relative
         z-index: 20
+        min-width: 320px
+        overflow: hidden
 
 .section
     position: relative
@@ -65,6 +68,7 @@ body
         flex-wrap: wrap
         align-items: center
         justify-content: center
+        position: relative
     &__header-links
         position: absolute
         left: 0
@@ -104,15 +108,47 @@ body
     &_ta-left
         text-align: left
 
+.section1-main
+    &__content
+        position: absolute
+        right: 7vw
+        bottom: 7vw
+        display: flex
+        align-items: flex-end
+        width: 43vw
+        justify-content: space-between
+    &__content-right
+        color: $red
+        width: 9vw
+        text-align: right
+    &__logo-bl-top
+        font-size: 3vw
+        line-height: 0.8em
+        color: $red
+        font-style: italic
+    &__logo-bl-bottom
+        padding-left: 4vw
+
+.st-text
+    font-size: 0.9vw
 
 .section2-main
     &__subtitle
         margin-bottom: 1vw
     &__info
         margin-bottom: 2vw
+    &__list
+        margin-bottom: 4vw
+    &__footer
+        text-align: center
+        font-size: 0
+        line-height: 0
+    &__logo-img
+        width: 40vw
 
 .button
     text-transform: uppercase
+    cursor: pointer
     text-decoration: none
     width: 14vw
     background-color: $red
@@ -126,6 +162,8 @@ body
     padding: 0.5vw
     border: 0.3vw solid $red
     transition: all 0.5s ease 0s
+    position: relative
+    z-index: 20
     &_center
         margin: 0 auto
     &:hover
@@ -208,8 +246,12 @@ body
     font-family: $fbook
     text-transform: uppercase
     transition: all 0.5s ease 0s
+    display: inline-block
+    line-height: 0.8em
     &__bold
         font-family: $fbold
+    &__italic
+        font-style: italic
     &:hover
         color: $red
 
@@ -225,7 +267,14 @@ body
         margin-right: 0
     &:hover
         color: $red
+
+
 .section3-main
+    &__logo
+        text-align: center
+        margin-bottom: 3vw
+    &__logo-img
+        width: 55vw
     &__subtitle
         margin-bottom: 3vw
     &__content
@@ -300,3 +349,264 @@ body
         color: #000
         font-family: $fbold
         display: block
+
+
+@media screen and (max-width: 1280px)
+    body
+        background-image: url('../images/graph-bg.png')
+        -webkit-background-size: cover
+        background-size: cover
+        background-attachment: fixed
+        background-position: center center
+
+    .title
+        font-size: 80px
+        line-height: 1em
+
+    .title_fz1vw
+        font-size: 15px
+
+    .title_fz1-2vw
+        font-size: 18px
+    .title_fz6-4vw
+        font-size: 42px
+    .title_fz1-6vw
+        font-size: 20px
+        br
+            display: none
+
+    .section
+        min-height: auto
+        padding: 10px 0
+        &__content
+            max-width: 730px
+            padding: 0 15px
+            display: block
+            margin: 0 auto
+
+
+    .button
+        font-size: 18px
+        padding: 15px 10px
+        width: 250px
+
+    .body__canvas
+        display: none
+
+    .phone-mail
+        display: inline-block
+
+    .section1-main
+        padding: 100px 0 60px
+        &__content
+            width: auto
+            position: static
+            display: block
+        &__content-left
+            text-align: right
+            margin-bottom: 70px
+        &__content-right
+            text-align: left
+            width: 150px
+        &__title
+            margin-bottom: 30px
+
+    .section1-main__logo-bl
+        display: inline-block
+
+    .section1-main__logo-bl-top
+        font-size: 40px
+        padding-right: 40px
+
+    .logo-link
+        font-size: 35px
+
+    .st-text
+        font-size: 16px
+
+    .container_header
+        max-width: 730px
+        padding: 0 15px
+        width: auto
+        min-height: 60px
+
+    .section__header-links
+        width: 100%
+
+    .links-list
+        justify-content: space-between
+        height: 60px
+        &__section
+            margin: 0
+            &:first-child
+                order: 1
+        .logo-link
+            font-size: 20px
+
+    .soc__item
+        font-size: 20px
+        margin-right: 10px
+
+    .section2-main
+        padding-top: 50px
+        padding-bottom: 40px
+        &__title
+            margin-bottom: 30px
+        &__subtitle
+            margin-bottom: 30px
+        &__info
+            margin-bottom: 40px
+        &__list
+            margin-bottom: 60px
+
+    .grid-ul
+        column-count: 1
+        font-size: 18px
+        padding: 0
+        margin: 0
+        &__li
+            margin-bottom: 20px
+            padding: 0
+            padding-left: 30px
+            &:before
+                width: 10px
+                height: 10px
+                top: 6px
+            &:last-child
+                margin-bottom: 0
+
+    .section3-main
+        padding-top: 30px
+        padding-bottom: 30px
+
+    .section3-main__content
+        display: block
+
+    .section3-main__content-left
+        width: 100%
+        margin-bottom: 20px
+
+    .section3-main__content-right
+        width: 100%
+        padding-left: 20px
+        .title
+            margin-bottom: 5px
+
+    .info-box
+        font-size: 14px
+
+    .list-ul
+        font-size: 14px
+        &__li
+            margin-bottom: 10px
+            &:before
+                width: 8px
+                height: 8px
+                left: -20px
+                top: 5px
+            &:last-child
+                margin-bottom: 0
+
+    .info-box__title
+        margin-bottom: 5px
+
+    .section4-main
+        padding-top: 30px
+        padding-bottom: 30px
+
+    .form
+        padding:  20px 15px
+        font-size: 16px
+        display: block
+        &__line
+            margin-bottom: 25px
+        &__section
+            width: 100%
+            margin-bottom: 25px
+            &:last-child
+                margin-bottom: 0
+
+    .st-textarea
+        height: 100px
+        font-size: 16px
+
+    .st-input
+        font-size: 16px
+        padding: 10px
+
+    .section5-main
+        padding: 100px 0
+        &__title
+            font-size: 90px
+
+    .phone-mail__mail
+        font-size: 15px
+
+    .phone-mail__phone
+        font-size: 25px
+
+
+@media screen and (max-width: 768px)
+    .button
+        font-size: 15px
+        padding: 10px
+        width: 150px
+        text-align: center
+
+    .section__content
+        padding: 30px 10px
+
+    .links-list
+        height: 45px
+        padding: 0 10px
+
+    .container_header
+        min-height: 45px
+
+    .section1-main
+        padding: 0
+
+    .title
+        font-size: 45px
+
+    .title_fz1vw
+        font-size: 12px
+
+    .title_fz1-2vw
+        font-size: 14px
+
+    .title_fz6-4vw
+        font-size: 30px
+
+    .title_fz1-6vw
+        font-size: 16px
+        br
+            display: none
+
+    .section1-main__content-left
+        margin-bottom: 30px
+
+    .links-list .logo-link, .soc__item
+        font-size: 18px
+
+    .container
+        width: auto
+        padding: 0
+        max-width: 500px
+
+    .section2-main__subtitle, .section2-main__title, .section2-main__info
+        margin-bottom: 20px
+
+    .grid-ul
+        font-size: 15px
+        &__li:before
+            top: 4px
+
+    .section2-main__logo-img
+        width: 70%
+
+    .section3-main__logo-img
+        width: 90%
+
+    .section5-main__title
+        font-size: 70px

@@ -15,7 +15,21 @@ html
                     a(href='#').button.button_center
                         span.button__content начать работу
                 .section__content
-                    h1.title openfoam
+                    .section1-main
+                        h1.title.section1-main__title openfoam
+                        .section1-main__content
+                            .section1-main__content-left
+                                .section1-main__logo-bl
+                                    .section1-main__logo-bl-top в облаке
+                                    .section1-main__logo-bl-bottom
+                                        a(href='#').logo-link
+                                            span.logo-link__bold hpc
+                                            span.logo-link__italic hub
+                            .section1-main__content-right
+                                .st-text
+                                    | виртуальный  суперкомпьютер с предустановленным и настроенным
+                                    |
+                                    strong.st-tex__strong OpenFOAM
                 .section__footer
                     a(href='#').button.button_center
                         span.button__content узнать больше
@@ -27,7 +41,7 @@ html
                                 .links-list__section
                                     a(href='#').logo-link
                                         span.logo-link__bold hpc
-                                        | hub
+                                        span.logo-link__italic hub
                                 .links-list__section
                                     nav.soc
                                         a(href='#').soc__item.icon-facebook
@@ -59,6 +73,7 @@ html
                                 li.grid-ul__li Поддержка 24x7: мы ответим на любые вопросы и при необходимости поможем с адаптацией окружения под ваши задачи
                                 li.grid-ul__li Отсутствие оплаты за простой
                         .section2-main__footer
+                            img(src='images/img-logo1.png').section2-main__logo-img
                 .section__footer
                     a(href='#').button.button_center
                         span.button__content ЧИТАТЬ CASE STUDY
@@ -75,10 +90,10 @@ html
                                     nav.soc
                                         a(href='#').soc__item.icon-facebook
                                         a(href='#').soc__item.icon-twitter
-                        a(href='#').button.button_center
-                            span.button__content начать работу
                 .section__content.section3-main
                     .container
+                        .section3-main__logo
+                            img(src='images/img-logo2.png').section3-main__logo-img
                         .section3-main__subtitle
                             h3.title.title_fz1-6vw.title_black РАСЧЕТ НА ПРИМЕРЕ CASE STUDY
                         .section3-main__content
@@ -93,12 +108,15 @@ html
                             .section3-main__content-right
                                 .title.title_fz1vw.title_ta-left Решение
                                 ul.list-ul
-                                    .list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
-                                    .list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
-                                    .list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
-                                    .list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
-                                    .list-ul__li На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
-            .section
+                                    li.list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
+                                    li.list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
+                                    li.list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
+                                    li.list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
+                                    li.list-ul__li На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
+                .section__footer
+                    a(href='#').button.button_center
+                        span.button__content начать работу
+            form.section
                 .section__header
                     .container.container_header
                         .section__header-links
@@ -140,7 +158,7 @@ html
                                         .form-line__content
                                             textarea(placeholder='Расскажите нам, что бы вы ещё хотели иметь на вашем кластере? ОС? ПО? Библиотеки? Встроенная кофемашина?').st-textarea
                 .section__footer
-                    a(href='#').button.button_center
+                    button.button.button_center
                         span.button__content ОТПРАВИТЬ ЗАЯВКУ
             .section
                 .section__content

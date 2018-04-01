@@ -1,22 +1,4 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-        verticalCentered: false,
-        css3: false,
-        navigation: true,
-        navigationPosition: 'right',
-        // navigationTooltips: ['First page', 'Second page', 'Third and last page']
-    });
-
-
-
-
-
-    /*!
-     * Mantis.js / jQuery / Zepto.js plugin for Constellation
-     * @version 1.2.2
-     * @author AcauГЈ Montiel <contato@acauamontiel.com.br>
-     * @license http://acaua.mit-license.org/
-     */
     (function ($, window) {
         var $window = $(window);
         /**
@@ -217,6 +199,16 @@ $(document).ready(function() {
         };
     })($, window);
 
-    // Init plugin
-    $('canvas').constellation({ });
+    if ($(window).width() > 1280) {
+        $('canvas').constellation({ });
+
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3: false,
+            navigation: true,
+            navigationPosition: 'right',
+            // navigationTooltips: ['First page', 'Second page', 'Third and last page']
+        });
+    }
+
 });
