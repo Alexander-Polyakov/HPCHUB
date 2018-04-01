@@ -25,7 +25,7 @@ $(document).ready(function() {
                     width: window.innerWidth,
                     height: window.innerHeight,
                     velocity: 0.1,
-                    length: 200,
+                    length: 100,
                     distance: 200,
                     radius: 200,
                     stars: []
