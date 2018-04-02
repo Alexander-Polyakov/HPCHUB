@@ -36,14 +36,24 @@ body
 
 .container
     width: 60vw
-    padding: 0 20px
-    margin: 0 auto
     &_header
         width: 70vw
         position: relative
         min-height: 4vw
 
+
+.fp-viewing-secondSection, .fp-viewing-thirdSection, .fp-viewing-fourthSection
+    .body__links
+        opacity: 1
+
 .body
+    &__links
+        position: fixed
+        left: 15vw
+        transition: 0.5s ease 0s
+        opacity: 0
+        z-index: 30
+        top: 0
     &__canvas
         position: fixed
         left: 0
@@ -56,11 +66,14 @@ body
         z-index: 20
         min-width: 320px
 
-.section
+.section-flex
     position: relative
     display: flex
-    min-height: 100vh
+    height: 100vh
     flex-direction: column
+    &__header, &__footer
+        text-align: center
+        height: 4vw
     &__content
         flex: 1
         display: flex
@@ -68,15 +81,11 @@ body
         align-items: center
         justify-content: center
         position: relative
-    &__header-links
-        position: absolute
-        left: 0
-        top: 0
 
 
 .links-list
     display: flex
-    min-height: 4vw
+    height: 4vw
     align-items: center
     &__section
         margin-right: 1.5vw
@@ -84,12 +93,13 @@ body
             margin-right: 0
 
 .title
-    font-size: 5.2vw
-    line-height: 1.5em
+    line-height: 1.2em
     text-transform: uppercase
     color: $red
     font-family: $fbold
     text-align: center
+    &_fz5-2vw
+        font-size: 5.2vw
     &_fz6-4vw
         font-size: 6.5vw
     &_fz1-6vw
@@ -107,7 +117,7 @@ body
     &_ta-left
         text-align: left
 
-.section1-main
+.section-first
     &__content
         position: absolute
         right: 7vw
@@ -154,24 +164,20 @@ body
     font-family: $fh
     font-size: 1.2vw
     color: #fff
-    display: flex
-    align-items: center
-    justify-content: center
-    min-height: 4vw
-    padding: 0.5vw
+    text-align: center
     border: 0.3vw solid $red
     transition: all 0.5s ease 0s
     position: relative
+    line-height: 3.5vw
+    padding: 0 0.5vw
     z-index: 20
-    &_center
-        margin: 0 auto
+    display: inline-block
+    outline: none
     &:hover
         background-color: #fff
         color: $red
     &:active
-        transition: all 0s ease 0s
-        border-width: 0.5vw
-        font-size: 1vw
+        transform: scale(0.8)
 
 
 .grid-ul
@@ -185,7 +191,7 @@ body
         padding-left: 1.5vw
         padding-top: 1.5vw
         position: relative
-        display: block
+        display: inline-block
         &:before
             content: ''
             width: 1vw
@@ -222,6 +228,7 @@ body
     transition: all 0.5s ease 0s
     border: 1px solid #000
     font-style: italic
+    outline: none
     &:focus
         border-color: $red
 
@@ -234,6 +241,7 @@ body
     transition: all 0.5s ease 0s
     border: 1px solid #000
     font-style: italic
+    outline: none
     resize: none
     &:focus
         border-color: $red
@@ -276,20 +284,31 @@ body
         width: 55vw
     &__subtitle
         margin-bottom: 3vw
-    &__content
-        display: flex
-        justify-content: space-between
-        align-items: center
-    &__content-left
-        width: 40%
-    &__content-right
-        width: 60%
-        padding-left: 4vw
+
+
+.case-study-grid
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 1vw
+    &__section
+        &:first-child
+            width: 40%
+        &:last-child
+            width: 60%
+            padding-left: 4vw
+
+.case-study-item
+    &__title
+        font-size: 1vw
+        margin-bottom: 0.2vw
+        text-transform: uppercase
+        color: $red
+        font-family: $fh
 
 .info-box
     background: rgba(255,255,255,0.75)
-    padding: 2vw
-    font-size: 0.8vw
+    padding: 1.5vw
     &__title
         text-align: left
         margin-bottom: 0.1vw
@@ -301,7 +320,6 @@ body
 
 
 .list-ul
-    font-size: 0.8vw
     list-style: none
     &__li
         position: relative
@@ -341,6 +359,8 @@ body
         font-size: 1vw
         text-transform: uppercase
         text-decoration: none
+        &:hover
+            text-decoration: underline
     &__phone
         text-decoration: none
         font-size: 2vw
@@ -348,264 +368,292 @@ body
         color: #000
         font-family: $fbold
         display: block
+        &:hover
+            text-decoration: underline
 
 
 @media screen and (max-width: 1280px)
-    body
-        background-image: url('../images/graph-bg.png')
-        -webkit-background-size: cover
-        background-size: cover
-        background-attachment: fixed
-        background-position: center center
-
-    .title
-        font-size: 80px
-        line-height: 1em
-
-    .title_fz1vw
-        font-size: 15px
-
-    .title_fz1-2vw
-        font-size: 18px
-    .title_fz6-4vw
-        font-size: 42px
-    .title_fz1-6vw
-        font-size: 20px
-        br
-            display: none
-
-    .section
-        min-height: auto
-        padding: 10px 0
-        &__content
-            max-width: 730px
-            padding: 0 15px
-            display: block
-            margin: 0 auto
-
-
-    .button
-        font-size: 18px
-        padding: 15px 10px
-        width: 250px
-
-    .body__canvas
-        display: none
-
-    .phone-mail
-        display: inline-block
-
-    .section1-main
-        padding: 100px 0 60px
-        &__content
-            width: auto
-            position: static
-            display: block
-        &__content-left
-            text-align: right
-            margin-bottom: 70px
-        &__content-right
-            text-align: left
-            width: 150px
-        &__title
-            margin-bottom: 30px
-
-    .section1-main__logo-bl
-        display: inline-block
-
-    .section1-main__logo-bl-top
-        font-size: 40px
-        padding-right: 40px
-
     .logo-link
-        font-size: 35px
-
-    .st-text
-        font-size: 16px
-
-    .container_header
-        max-width: 730px
-        padding: 0 15px
-        width: auto
-        min-height: 60px
-
-    .section__header-links
-        width: 100%
-
-    .links-list
-        justify-content: space-between
-        height: 60px
-        &__section
-            margin: 0
-            &:first-child
-                order: 1
-        .logo-link
-            font-size: 20px
+        font-size: 24px
 
     .soc__item
-        font-size: 20px
-        margin-right: 10px
-
-    .section2-main
-        padding-top: 50px
-        padding-bottom: 40px
-        &__title
-            margin-bottom: 30px
-        &__subtitle
-            margin-bottom: 30px
-        &__info
-            margin-bottom: 40px
-        &__list
-            margin-bottom: 60px
-
-    .grid-ul
-        column-count: 1
         font-size: 18px
-        padding: 0
-        margin: 0
-        &__li
-            margin-bottom: 20px
-            padding: 0
-            padding-left: 30px
-            &:before
-                width: 10px
-                height: 10px
-                top: 6px
-            &:last-child
-                margin-bottom: 0
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
 
-    .section3-main
-        padding-top: 30px
-        padding-bottom: 30px
+    .section-flex__footer, .section-flex__header, .links-list
+        height: 60px
 
-    .section3-main__content
-        display: block
-
-    .section3-main__content-left
-        width: 100%
-        margin-bottom: 20px
-
-    .section3-main__content-right
-        width: 100%
-        padding-left: 20px
-        .title
-            margin-bottom: 5px
-
-    .info-box
-        font-size: 14px
-
-    .list-ul
-        font-size: 14px
-        &__li
-            margin-bottom: 10px
-            &:before
-                width: 8px
-                height: 8px
-                left: -20px
-                top: 5px
-            &:last-child
-                margin-bottom: 0
-
-    .info-box__title
-        margin-bottom: 5px
-
-    .section4-main
-        padding-top: 30px
-        padding-bottom: 30px
-
-    .form
-        padding:  20px 15px
-        font-size: 16px
-        display: block
-        &__line
-            margin-bottom: 25px
-        &__section
-            width: 100%
-            margin-bottom: 25px
-            &:last-child
-                margin-bottom: 0
-
-    .st-textarea
-        height: 100px
-        font-size: 16px
-
-    .st-input
-        font-size: 16px
-        padding: 10px
-
-    .section5-main
-        padding: 100px 0
-        &__title
-            font-size: 90px
-
-    .phone-mail__mail
-        font-size: 15px
-
-    .phone-mail__phone
-        font-size: 25px
-
-
-@media screen and (max-width: 768px)
     .button
-        font-size: 15px
-        padding: 10px
-        width: 150px
-        text-align: center
+        font-size: 16px
+        line-height: 50px
+        width: 175px
 
-    .section__content
-        padding: 30px 10px
-
-    .links-list
-        height: 45px
-        padding: 0 10px
-
-    .container_header
-        min-height: 45px
-
-    .section1-main
-        padding: 0
-
-    .title
-        font-size: 45px
-
-    .title_fz1vw
-        font-size: 12px
-
-    .title_fz1-2vw
-        font-size: 14px
+    .title_fz5-2vw
+        font-size: 60px
 
     .title_fz6-4vw
-        font-size: 30px
+        font-size: 70px
 
     .title_fz1-6vw
-        font-size: 16px
-        br
-            display: none
+        font-size: 22px
 
-    .section1-main__content-left
-        margin-bottom: 30px
-
-    .links-list .logo-link, .soc__item
+    .title_fz1-2vw
         font-size: 18px
 
-    .container
-        width: auto
-        padding: 0
-        max-width: 500px
+    .section-first__logo-bl-top
+        font-size: 40px
 
-    .section2-main__subtitle, .section2-main__title, .section2-main__info
-        margin-bottom: 20px
+    .section-first__logo
+        font-size: 35px
+
+    .section-first__content-right
+        width: 175px
+
+    .st-text
+        font-size: 18px
+
+    .section-first__content
+        right: 3vw
+        width: 45vw
+
+    .container
+        width: 700px
+        padding: 0 15px
 
     .grid-ul
-        font-size: 15px
-        &__li:before
-            top: 4px
+        font-size: 16px
+        margin-top: -18px
+        column-gap: 30px
+
+    .grid-ul__li
+        padding-left: 18px
+        padding-top: 18px
+        &:before
+            width: 10px
+            height: 10px
+            top: 22px
+            left: 0
+
+
+    .list-ul__li
+        &:before
+            left: -15px
+            top: 6px
+            width: 7px
+            height: 7px
 
     .section2-main__logo-img
         width: 70%
 
     .section3-main__logo-img
-        width: 90%
+        width: 80%
+
+    .case-study-item__title
+        font-size: 14px
+        margin-bottom: 5px
+
+    .case-study-grid
+        font-size: 14px
+
+
+    .form
+        font-size: 15px
+
+    .st-input, .st-textarea
+        font-size: 15px
+
+    .section5-main__title
+        font-size: 90px
+
+    .phone-mail__mail
+        font-size: 14px
+
+    .phone-mail__phone
+        font-size: 22px
+
+
+@media screen and (max-width: 768px)
+    .button
+        font-size: 14px
+        width: 140px
+        line-height: 45px
+
+    .section-flex__footer, .section-flex__header
+        height: 47px
+
+
+    .links-list
+        height: 0
+
+    .title_fz5-2vw
+        font-size: 50px
+
+    .section-first__title
+        margin-bottom: 200px
+
+    .section-first__content
+        width: 320px
+        right: 50%
+        margin-right: -160px
+        bottom: 30px
+        padding: 100px 10px 0
+
+    .section-first__content-left
+        position: absolute
+        right: 10px
+        top: 0
+        
+    .section-first__content-right
+        text-align: left
+        width: 150px
+
+    .section-first__logo-bl-top
+        font-size: 30px
+
+    .section-first__logo
+        font-size: 25px
+
+    .st-text
+        font-size: 16px
+        
+    .body__links
+        position: static
+
+    .links-list__section:first-child
+        position: fixed
+        top: 15px
+        right: 0
+        z-index: 30
+
+    .links-list__section:last-child
+        position: fixed
+        top: 13px
+        left: 20px
+        z-index: 30
+
+    .logo-link
+        font-size: 20px
+
+    .title_fz6-4vw
+        font-size: 30px
+
+    .title_fz1-6vw
+        font-size: 14px
+        br
+            display: none
+
+    .title_fz1-2vw
+        font-size: 14px
+
+    .container
+        width: 320px
+        padding: 0 10px
+
+
+    .grid-ul
+        font-size: 14px
+        margin-top: -10px
+        column-gap: 10px
+        &__li
+            padding-top: 10px
+            padding-left: 10px
+            &:before
+                width: 8px
+                height: 8px
+                top: 15px
+
+    .case-study-item__content
+        display: none
+
+    .case-study-grid
+        display: block
+        &__section
+            &:first-child
+                width: 100%
+            &:last-child
+                width: 100%
+                padding-left: 0
+
+    .info-box
+        background: transparent
+        padding: 0
+        &__section
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 30px
+                
+    .case-study-item__title
+        font-size: 18px
+        background: rgba(255,255,255,.75)
+        padding: 10px
+        color: #000
+        position: relative
+        &:after
+            content: ''
+            width: 10px
+            height: 10px
+            border-top: 3px solid $red
+            border-right: 3px solid $red
+            position: absolute
+            right: 15px
+            top: 50%
+            margin-top: -5px
+            transform: rotate(45deg)
+
+    .case-study-item.opened .case-study-item__content
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 100
+        padding: 30px
+        background-color: #fff
+        display: block
+
+    .case-study-item__content-close
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 15px
+        height: 15px
+        transform: rotate(45deg)
+        &:before
+            content: ''
+            width: 100%
+            height: 2px
+            background-color: #000
+            top: 50%
+            margin-top: -1px
+            left: 0
+            position: absolute
+        &:after
+            content: ''
+            width: 2px
+            height: 100%
+            background-color: #000
+            left: 50%
+            margin-left: -1px
+            top: 0
+            position: absolute
+
+    .form__section
+        width: 100%
+        &:last-child
+            display: none
+
+    .form-line__info
+        display: none
+
+    .form, .st-input, .st-textarea
+        font-size: 16px
+        padding: 10px
+
+    .st-textarea
+        height: 200px
+
 
     .section5-main__title
         font-size: 70px

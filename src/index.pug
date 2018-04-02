@@ -9,165 +9,152 @@ html
         include pug/styles.pug
     body.body
         canvas.body__canvas
+        .body__links
+            .links-list
+                .links-list__section
+                    a(href='#').logo-link
+                        span.logo-link__bold hpc
+                        span.logo-link__italic hub
+                .links-list__section
+                    nav.soc
+                        a(href='#').soc__item.icon-facebook
+                        a(href='#').soc__item.icon-twitter
         .body__page#fullpage
-            .section
-                .section__header
-                    a(href='#').button.button_center
-                        span.button__content начать работу
-                .section__content
-                    .section1-main
-                        h1.title.section1-main__title openfoam
-                        .section1-main__content
-                            .section1-main__content-left
-                                .section1-main__logo-bl
-                                    .section1-main__logo-bl-top в облаке
-                                    .section1-main__logo-bl-bottom
-                                        a(href='#').logo-link
+            .section.section-first
+                .section-flex
+                    .section-flex__header
+                        a(href='#fourthSection').button начать работу
+                    .section-flex__content
+                        h1.title.title_fz5-2vw.section-first__title openfoam
+                        .section-first__content
+                            .section-first__content-left
+                                .section-first__logo-bl
+                                    .section-first__logo-bl-top в облаке
+                                    .section-first__logo-bl-bottom
+                                        .section-first__logo.logo-link
                                             span.logo-link__bold hpc
                                             span.logo-link__italic hub
-                            .section1-main__content-right
+                            .section-first__content-right
                                 .st-text
                                     | виртуальный  суперкомпьютер с предустановленным и настроенным
                                     |
-                                    strong.st-tex__strong OpenFOAM
-                .section__footer
-                    a(href='#').button.button_center
-                        span.button__content узнать больше
+                                    strong OpenFOAM
+                    .section-flex__footer
+                        a(href='#secondSection').button узнать больше
             .section
-                .section__header
-                    .container.container_header
-                        .section__header-links
-                            .links-list
-                                .links-list__section
-                                    a(href='#').logo-link
-                                        span.logo-link__bold hpc
-                                        span.logo-link__italic hub
-                                .links-list__section
-                                    nav.soc
-                                        a(href='#').soc__item.icon-facebook
-                                        a(href='#').soc__item.icon-twitter
-                        a(href='#').button.button_center
-                            span.button__content начать работу
-                .section__content.section2-main
-                    .container
-                        .section2-main__title
-                            h2.title.title_fz6-4vw openfoam 5.0
-                        .section2-main__subtitle
-                            h3.title.title_fz1-6vw.title_black От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0
-                        .section2-main__info
-                            .title.title_ttn.title_fz1-2vw.title_black
-                                | Цена почасовая
-                                |
-                                span.title__red 5.5 RUB
-                                |
-                                | (ядро*час) или
-                                |
-                                span.title__red 2,640.00 RUB
-                                |
-                                | за один узел в сутки
-                        .section2-main__list
-                            ul.grid-ul
-                                li.grid-ul__li Кластер доступен к работе в течение 30 минут
-                                li.grid-ul__li Никакой настройки: ПО профессионально настроено и готово к работе
-                                li.grid-ul__li Почасовая тарификация
-                                li.grid-ul__li Поддержка 24x7: мы ответим на любые вопросы и при необходимости поможем с адаптацией окружения под ваши задачи
-                                li.grid-ul__li Отсутствие оплаты за простой
-                        .section2-main__footer
-                            img(src='images/img-logo1.png').section2-main__logo-img
-                .section__footer
-                    a(href='#').button.button_center
-                        span.button__content ЧИТАТЬ CASE STUDY
+                .section-flex
+                    .section-flex__header
+                        a(href='#fourthSection').button начать работу
+                    .section-flex__content.section2-main
+                        .container
+                            .section2-main__title
+                                h2.title.title_fz6-4vw openfoam 5.0
+                            .section2-main__subtitle
+                                h3.title.title_fz1-6vw.title_black От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0
+                            .section2-main__info
+                                .title.title_ttn.title_fz1-2vw.title_black
+                                    | Цена почасовая
+                                    |
+                                    span.title__red 5.5 RUB
+                                    |
+                                    | (ядро*час) или
+                                    |
+                                    span.title__red 2,640.00 RUB
+                                    |
+                                    | за один узел в сутки
+                            .section2-main__list
+                                ul.grid-ul
+                                    li.grid-ul__li Кластер доступен к работе в течение 30 минут
+                                    li.grid-ul__li Никакой настройки: ПО профессионально настроено и готово к работе
+                                    li.grid-ul__li Почасовая тарификация
+                                    li.grid-ul__li Поддержка 24x7: мы ответим на любые вопросы и при необходимости поможем с адаптацией окружения под ваши задачи
+                                    li.grid-ul__li Отсутствие оплаты за простой
+                            .section2-main__footer
+                                img(src='images/img-logo1.png').section2-main__logo-img
+                    .section-flex__footer
+                        a(href='#thirdSection').button читать case study
             .section
-                .section__header
-                    .container.container_header
-                        .section__header-links
-                            .links-list
-                                .links-list__section
-                                    a(href='#').logo-link
-                                        span.logo-link__bold hpc
-                                        | hub
-                                .links-list__section
-                                    nav.soc
-                                        a(href='#').soc__item.icon-facebook
-                                        a(href='#').soc__item.icon-twitter
-                .section__content.section3-main
-                    .container
-                        .section3-main__logo
-                            img(src='images/img-logo2.png').section3-main__logo-img
-                        .section3-main__subtitle
-                            h3.title.title_fz1-6vw.title_black РАСЧЕТ НА ПРИМЕРЕ CASE STUDY
-                        .section3-main__content
-                            .section3-main__content-left
-                                .info-box
-                                    .info-box__section
-                                        .title.title_fz1vw.info-box__title Задача
-                                        p Компания Энергозапас решала в облаке HPC Hub с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
-                                    .info-box__section
-                                        .title.title_fz1vw.info-box__title Конечная цель
-                                        p Нахождение такой формы оболочки, при которой распределение давления по поверхности создавало бы определенную комбинацию горизонтальных и вертикальных усилий в верхней точке сооружения.
-                            .section3-main__content-right
-                                .title.title_fz1vw.title_ta-left Решение
-                                ul.list-ul
-                                    li.list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
-                                    li.list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
-                                    li.list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
-                                    li.list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
-                                    li.list-ul__li На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
-                .section__footer
-                    a(href='#').button.button_center
-                        span.button__content начать работу
-            form.section
-                .section__header
-                    .container.container_header
-                        .section__header-links
-                            .links-list
-                                .links-list__section
-                                    a(href='#').logo-link
-                                        span.logo-link__bold hpc
-                                        | hub
-                                .links-list__section
-                                    nav.soc
-                                        a(href='#').soc__item.icon-facebook
-                                        a(href='#').soc__item.icon-twitter
-                .section__content.section4-main
-                    .container
-                        .section4-main__title
-                            .title.title_fz1-6vw.title_black Заявка
-                        .section4-main__form
-                            .form
-                                .form__section
-                                    .form__line.form-line
-                                        .form-line__info Важная информация </br> (без неё нам будет сложно)*
-                                        .form-line__content
-                                            input(type='text' placeholder='Имя').st-input
-                                    .form__line.form-line
-                                        .form-line__content
-                                            input(type='text' placeholder='Email или телефон').st-input
-                                    .form__line.form-line
-                                        .form-line__content
-                                            textarea(placeholder='Расскажите нам что-то про свои задачи (если хотите)').st-textarea
-                                .form__section
-                                    .form__line.form-line
-                                        .form-line__info Неважная информация (но с ней всё будет намного быстрее)
-                                        .form-line__content
-                                            input(type='text' placeholder='Кол-во вычислительных ядр').st-input
-                                    .form__line.form-line
-                                        .form-line__content
-                                            input(type='text' placeholder='Необходимый размер хранилища').st-input
-                                    .form__line.form-line
-                                        .form-line__content
-                                            textarea(placeholder='Расскажите нам, что бы вы ещё хотели иметь на вашем кластере? ОС? ПО? Библиотеки? Встроенная кофемашина?').st-textarea
-                .section__footer
-                    button.button.button_center
-                        span.button__content ОТПРАВИТЬ ЗАЯВКУ
+                .section-flex
+                    .section-flex__header
+
+                    .section-flex__content.section3-main
+                        .container
+                            .section3-main__logo
+                                img(src='images/img-logo2.png').section3-main__logo-img
+                            .section3-main__subtitle
+                                h3.title.title_fz1-6vw.title_black РАСЧЕТ НА ПРИМЕРЕ CASE STUDY
+                            .section3-main__content
+                                .case-study-grid
+                                    .case-study-grid__section
+                                        .info-box
+                                            .info-box__section
+                                                .case-study-item
+                                                    .case-study-item__title Задача
+                                                    .case-study-item__content
+                                                        | Компания Энергозапас решала в облаке HPC Hub с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
+                                                        i.case-study-item__content-close
+                                            .info-box__section
+                                                .case-study-item
+                                                    .case-study-item__title Конечная цель
+                                                    .case-study-item__content
+                                                        | Нахождение такой формы оболочки, при которой распределение давления по поверхности создавало бы определенную комбинацию горизонтальных и вертикальных усилий в верхней точке сооружения.
+                                                        i.case-study-item__content-close
+                                    .case-study-grid__section
+                                        .info-box__section
+                                            .case-study-item
+                                                .case-study-item__title Решение
+                                                .case-study-item__content
+                                                    ul.list-ul
+                                                        li.list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
+                                                        li.list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
+                                                        li.list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
+                                                        li.list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
+                                                        li.list-ul__li На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
+                                                    i.case-study-item__content-close
+
+                    .section-flex__footer
+                        a(href='#fourthSection').button начать работу
             .section
-                .section__content
-                    .section5-main
-                        .section5-main__title.logo-link
-                            span.logo-link__bold hpc
-                            | hub
-                        .section5-main__footer
-                            .phone-mail
-                                a(href='mailto:info@hpchub.net').phone-mail__mail mail: info@hpchub.net
-                                a(href='tel:+7 495 008 6194').phone-mail__phone +7 495 008 6194
+                form.section-flex
+                    .section-flex__content.section4-main
+                        .container
+                            .section4-main__title
+                                .title.title_fz1-6vw.title_black Заявка
+                            .section4-main__form
+                                .form
+                                    .form__section
+                                        .form__line.form-line
+                                            .form-line__info Важная информация </br> (без неё нам будет сложно)*
+                                            .form-line__content
+                                                input(type='text' placeholder='Имя').st-input
+                                        .form__line.form-line
+                                            .form-line__content
+                                                input(type='text' placeholder='Email или телефон').st-input
+                                        .form__line.form-line
+                                            .form-line__content
+                                                textarea(placeholder='Расскажите нам что-то про свои задачи (если хотите)').st-textarea
+                                    .form__section
+                                        .form__line.form-line
+                                            .form-line__info Неважная информация (но с ней всё будет намного быстрее)
+                                            .form-line__content
+                                                input(type='text' placeholder='Кол-во вычислительных ядр').st-input
+                                        .form__line.form-line
+                                            .form-line__content
+                                                input(type='text' placeholder='Необходимый размер хранилища').st-input
+                                        .form__line.form-line
+                                            .form-line__content
+                                                textarea(placeholder='Расскажите нам, что бы вы ещё хотели иметь на вашем кластере? ОС? ПО? Библиотеки? Встроенная кофемашина?').st-textarea
+                    .section-flex__footer
+                        button.button ОТПРАВИТЬ ЗАЯВКУ
+            .section
+                .section-flex
+                    .section-flex__content
+                        .section5-main
+                            .section5-main__title.logo-link
+                                span.logo-link__bold hpc
+                                span.logo-link__italic hub
+                            .section5-main__footer
+                                .phone-mail
+                                    a(href='mailto:info@hpchub.net').phone-mail__mail mail: info@hpchub.net
+                                    a(href='tel:+7 495 008 6194').phone-mail__phone +7 495 008 6194
         include pug/scripts.pug

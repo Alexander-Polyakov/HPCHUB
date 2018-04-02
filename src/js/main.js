@@ -11,12 +11,12 @@ $(document).ready(function() {
                 defaults = {
                     star: {
                         color: '#c5c5c5',
-                        width: 5,
+                        width: 4,
                         randomWidth: true
                     },
                     line: {
                         color: '#c5c5c5',
-                        width: 1
+                        width: 0.8
                     },
                     position: {
                         x: 0,
@@ -25,7 +25,7 @@ $(document).ready(function() {
                     width: window.innerWidth,
                     height: window.innerHeight,
                     velocity: 0.1,
-                    length: 100,
+                    length: 70,
                     distance: 200,
                     radius: 200,
                     stars: []
@@ -199,16 +199,35 @@ $(document).ready(function() {
         };
     })($, window);
 
-    if ($(window).width() > 1280) {
-        $('canvas').constellation({ });
 
-        $('#fullpage').fullpage({
-            verticalCentered: false,
-            css3: false,
-            navigation: true,
-            navigationPosition: 'right',
-            // navigationTooltips: ['First page', 'Second page', 'Third and last page']
+    if ($(window).outerWidth() > 1281 ) {
+        $('canvas').constellation({
+            length: 120
+        });
+    } else if (($(window).outerWidth() > 768 ) && ($(window).outerWidth() < 1281 )) {
+        $('canvas').constellation({
+            length: 80
+        });
+    } else if (($(window).outerWidth() < 768 )) {
+        $('canvas').constellation({
+            length: 20
         });
     }
+
+
+    $(".case-study-item__title").click(function(){
+        if (($(window).outerWidth() < 768 )) {
+            $(this).closest(".case-study-item").addClass('opened');
+        }
+    });
+
+    $(".case-study-item__content-close").click(function(){
+        $(this).closest(".case-study-item").removeClass('opened');
+    });
+
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection']
+    });
 
 });
