@@ -12,7 +12,8 @@
     <canvas class="body__canvas"></canvas>
     <div class="body__links">
       <div class="links-list">
-        <div class="links-list__section"><a class="logo-link" href="#firstSection"><span class="logo-link__bold">hpc</span><span class="logo-link__italic">hub</span></a></div>
+        <div class="links-list__section"><a class="logo-link" href="#firstSection">
+            <object class="logo-link__icon" type="image/svg+xml" data="../images/logo.svg"></object></a></div>
         <div class="links-list__section">
           <nav class="soc"><a class="soc__item icon-facebook" href="#"></a><a class="soc__item icon-twitter" href="#"></a></nav>
         </div>
@@ -23,20 +24,22 @@
         <div class="section-flex">
           <div class="section-flex__header"><a class="button" href="#fourthSection">начать работу</a></div>
           <div class="section-flex__content">
-            <h1 class="title title_fz5-2vw section-first__title">openfoam</h1>
-            <div class="section-first__content">
-              <div class="section-first__content-left">
-                <div class="section-first__logo-bl">
-                  <div class="section-first__logo-bl-top">в облаке</div>
-                  <div class="section-first__logo-bl-bottom">
-                    <div class="section-first__logo logo-link"><span class="logo-link__bold">hpc</span><span class="logo-link__italic">hub</span></div>
+            <div class="section-first__container">
+              <h1 class="title title_fz_83 section-first__title">openfoam</h1>
+              <div class="section-first__content">
+                <div class="section-first__content-left">
+                  <div class="section-first__logo-bl">
+                    <div class="section-first__logo-bl-top">в облаке</div>
+                    <div class="section-first__logo-bl-bottom">
+                      <div class="section-first__logo logo-link"><span class="logo-link__bold">hpc</span><span class="logo-link__italic">hub</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="section-first__content-right">
-                <div class="st-text">
-                  виртуальный  суперкомпьютер с предустановленным и настроенным
-                  <strong>OpenFOAM</strong>
+                <div class="section-first__content-right">
+                  <div class="st-text">
+                    виртуальный суперкомпьютер <br/> с предустановленным и настроенным
+                    <strong>OpenFOAM</strong>
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,17 +53,17 @@
           <div class="section-flex__content section2-main">
             <div class="container">
               <div class="section2-main__title">
-                <h2 class="title title_fz6-4vw">openfoam 5.0</h2>
+                <h2 class="title title_fz_103">openfoam 5.0</h2>
               </div>
               <div class="section2-main__subtitle">
-                <h3 class="title title_fz1-6vw title_black">От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0</h3>
+                <h3 class="title title_fz_25 title_black">От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0</h3>
               </div>
               <div class="section2-main__info">
-                <div class="title title_ttn title_fz1-2vw title_black">
+                <div class="title title_ttn title_fz_18 title_black">
                   Цена почасовая
-                  <span class="title__red">5.5 RUB</span>
+                  <span class="title__red-span">5.5 RUB</span>
                   (ядро*час) или
-                  <span class="title__red">2,640.00 RUB</span>
+                  <span class="title__red-span">2,640.00 RUB</span>
                   за один узел в сутки
                 </div>
               </div>
@@ -86,7 +89,9 @@
             <div class="container">
               <div class="section3-main__logo"><img class="section3-main__logo-img" src="images/img-logo2.png"></div>
               <div class="section3-main__subtitle">
-                <h3 class="title title_fz1-6vw title_black">РАСЧЕТ НА ПРИМЕРЕ CASE STUDY</h3>
+                <h3 class="title title_fz_25 title_black section3-main__mobile-title"><span class="title__tablet-span">РАСЧЕТ</span>
+                  НА ПРИМЕРЕ CASE STUDY
+                </h3>
               </div>
               <div class="section3-main__content">
                 <div class="case-study-grid">
@@ -95,7 +100,10 @@
                       <div class="info-box__section">
                         <div class="case-study-item">
                           <div class="case-study-item__title">Задача</div>
-                          <div class="case-study-item__content">Компания Энергозапас решала в облаке HPC Hub с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
+                          <div class="case-study-item__content">
+                            Компания Энергозапас решала в облаке
+                            <strong>HPC Hub</strong>
+                            с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
                             <button class="case-study-item__content-close"></button>
                           </div>
                         </div>
@@ -111,19 +119,21 @@
                     </div>
                   </div>
                   <div class="case-study-grid__section">
-                    <div class="info-box__section">
-                      <div class="case-study-item">
-                        <div class="case-study-item__title">Решение</div>
-                        <div class="case-study-item__content">
-                          <ul class="list-ul">
-                            <li class="list-ul__li">Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.</li>
-                            <li class="list-ul__li">Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.</li>
-                            <li class="list-ul__li">Размеры расчетной области 2,5км x 2,5км x 1км.</li>
-                            <li class="list-ul__li">Каждая задача решалась в стационарной и нестационарной постановке.</li>
-                            <li class="list-ul__li">На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.</li>
-                          </ul>
-                          <button class="case-study-item__content-close"></button>
-                        </div>
+                    <div class="case-study-item">
+                      <div class="case-study-item__title">Решение</div>
+                      <div class="case-study-item__content">
+                        <ul class="list-ul">
+                          <li class="list-ul__li">Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.</li>
+                          <li class="list-ul__li">Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.</li>
+                          <li class="list-ul__li">Размеры расчетной области 2,5км x 2,5км x 1км.</li>
+                          <li class="list-ul__li">Каждая задача решалась в стационарной и нестационарной постановке.</li>
+                          <li class="list-ul__li">
+                            На кластере размером
+                            <strong>3 узла</strong>
+                            задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
+                          </li>
+                        </ul>
+                        <button class="case-study-item__content-close"></button>
                       </div>
                     </div>
                   </div>
@@ -139,13 +149,13 @@
           <div class="section-flex__content section4-main">
             <div class="container">
               <div class="section4-main__title">
-                <div class="title title_fz1-6vw title_black">Заявка</div>
+                <div class="title title_fz_25 title_black">Заявка</div>
               </div>
               <div class="section4-main__form">
                 <div class="form">
                   <div class="form__section">
                     <div class="form__line form-line">
-                      <div class="form-line__info">Важная информация </br> (без неё нам будет сложно)*</div>
+                      <div class="form-line__info"><span class="form-line__info-mobile-bold">Важная информация</span></br> (без неё нам будет сложно)<span class="red-text">*</span></div>
                       <div class="form-line__content">
                         <input class="st-input" type="text" placeholder="Имя">
                       </div>
@@ -163,7 +173,8 @@
                   </div>
                   <div class="form__section">
                     <div class="form__line form-line">
-                      <div class="form-line__info">Неважная информация (но с ней всё будет намного быстрее)</div>
+                      <div class="form-line__info"><span class="form-line__info-mobile-bold">
+                          Неважная информация</br> (но с ней всё будет намного быстрее)</span></div>
                       <div class="form-line__content">
                         <input class="st-input" type="text" placeholder="Кол-во вычислительных ядр">
                       </div>

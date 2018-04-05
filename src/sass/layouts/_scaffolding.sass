@@ -66,6 +66,9 @@ body
         z-index: 20
         min-width: 320px
 
+.container
+    width: 750px
+
 .section-flex
     position: relative
     display: flex
@@ -73,7 +76,7 @@ body
     flex-direction: column
     &__header, &__footer
         text-align: center
-        height: 4vw
+        height: 50px
     &__content
         flex: 1
         display: flex
@@ -82,53 +85,60 @@ body
         justify-content: center
         position: relative
 
-
 .links-list
     display: flex
-    height: 4vw
+    height: 50px
     align-items: center
     &__section
-        margin-right: 1.5vw
+        margin-right: 10px
         &:last-child
             margin-right: 0
 
 .title
-    line-height: 1.2em
+    line-height: 1em
     text-transform: uppercase
     color: $red
     font-family: $fbold
     text-align: center
-    &_fz5-2vw
-        font-size: 5.2vw
-    &_fz6-4vw
-        font-size: 6.5vw
-    &_fz1-6vw
-        font-size: 1.6vw
-    &_fz1-2vw
-        font-size: 1.2vw
-    &_fz1vw
-        font-size: 1vw 
+    &_fz_83
+        font-size: 83px
+        letter-spacing: 0.4px
+    &_fz_103
+        font-size: 100px
+        letter-spacing: -1px
+    &_fz_25
+        font-size: 25px
+        line-height: 1.56em
+        letter-spacing: 0.3px
+    &_fz_18
+        font-size: 18px
+        line-height: 1.53em
     &_black
         color: #000
     &_ttn
         text-transform: none
-    &__red
+    &__red-span
         color: $red
     &_ta-left
         text-align: left
 
 .section-first
+    &__container
+        width: 900px
+        padding: 190px 0
+        position: relative
     &__content
         position: absolute
-        right: 7vw
-        bottom: 7vw
+        right: 0
+        bottom: 0
         display: flex
         align-items: flex-end
-        width: 43vw
         justify-content: space-between
+    &__content-left
+        margin-right: 170px
     &__content-right
         color: $red
-        width: 9vw
+        width: 126px
         text-align: right
     &__logo-bl-top
         font-size: 3vw
@@ -139,40 +149,54 @@ body
         padding-left: 4vw
 
 .st-text
-    font-size: 0.9vw
+    font-size: 14px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: 1em
+    letter-spacing: normal
+    font-family: $fbook
+    strong
+        font-family: $fbold
+        font-weight: 400
+        line-height: 1.15em
 
 .section2-main
+    &__title
+        margin-bottom: 35px
     &__subtitle
-        margin-bottom: 1vw
+        margin-bottom: 25px
     &__info
-        margin-bottom: 2vw
+        margin-bottom: 30px
     &__list
-        margin-bottom: 4vw
+        margin-bottom: 65px
     &__footer
         text-align: center
         font-size: 0
         line-height: 0
     &__logo-img
-        width: 40vw
+        width: 520px
 
 .button
     text-transform: uppercase
     cursor: pointer
     text-decoration: none
-    width: 14vw
+    width: 170px
     background-color: $red
     font-family: $fh
-    font-size: 1.2vw
-    color: #fff
-    text-align: center
-    border: 0.3vw solid $red
+    border: 1px solid $red
+    line-height: 48px
     transition: all 0.5s ease 0s
     position: relative
-    line-height: 3.5vw
-    padding: 0 0.5vw
     z-index: 20
     display: inline-block
     outline: none
+    font-size: 14px
+    font-style: normal
+    font-stretch: normal
+    letter-spacing: 1.4px
+    text-align: center
+    color: #fff
     &:hover
         background-color: #fff
         color: $red
@@ -182,69 +206,63 @@ body
 
 .grid-ul
     column-count: 2
-    column-gap: 6vw
-    font-size: 1.5vw
+    column-gap: 160px
+    font-size: 22px
     list-style: none
-    margin-top: -1.5vw
-    line-height: 1.2em
+    margin-top: -20px
+    line-height: 1.1em
     &__li
-        padding-left: 1.5vw
-        padding-top: 1.5vw
+        padding-left: 30px
+        padding-top: 20px
         position: relative
         display: inline-block
         &:before
             content: ''
-            width: 1vw
-            height: 1vw
+            width: 15px
+            height: 15px
             position: absolute
             left: 0
-            top: 1.9vw
+            top: 25px
             background-color: $red
 
 
 .form
     background: rgba(255,255,255,0.75)
-    padding: 2vw 1.5vw
+    padding: 40px 30px
     display: flex
     justify-content: space-between
-    font-size: 1.2vw
     font-family: $fbook
+    font-size: 17px
+    line-height: 1.2em
     &__section
         width: 45%
     &__line
-        margin-bottom: 3vw
+        margin-bottom: 50px
         &:last-child
             margin-bottom: 0
 
-
 .form-line__info
-    margin-bottom: 1vw
+    margin-bottom: 10px
 
-.st-input
+.st-input, .st-textarea
     width: 100%
-    font-size: 1.2vw
-    padding: 0.8vw
+    font-size: 16px
+    padding: 0 13px
     font-family: $fbooko
     transition: all 0.5s ease 0s
-    border: 1px solid #000
-    font-style: italic
+    height: 46px
+    border: 0.5px solid #000
     outline: none
+    +phc(#979695)
+    color: #979695
     &:focus
         border-color: $red
+        color: #000
 
 .st-textarea
-    width: 100%
-    font-size: 1.2vw
-    padding: 0.8vw
-    height: 10vw
-    font-family: $fbooko
-    transition: all 0.5s ease 0s
-    border: 1px solid #000
-    font-style: italic
-    outline: none
+    padding: 20px 13px
+    height: 200px
     resize: none
-    &:focus
-        border-color: $red
 
 .logo-link
     color: #000
@@ -261,6 +279,8 @@ body
         font-style: italic
     &:hover
         color: $red
+    &__icon
+        width: 122px
 
 
 .soc__item
@@ -279,29 +299,32 @@ body
 .section3-main
     &__logo
         text-align: center
-        margin-bottom: 3vw
+        margin-bottom: 25px
     &__logo-img
-        width: 55vw
+        width: 100%
     &__subtitle
-        margin-bottom: 3vw
+        margin-bottom: 60px
 
 
 .case-study-grid
     display: flex
     justify-content: space-between
     align-items: center
-    font-size: 1vw
+    font-size: 12px
+    line-height: 1.5em
     &__section
         &:first-child
-            width: 40%
+            flex-basis: 256px
+            flex-shrink: 0
         &:last-child
-            width: 60%
-            padding-left: 4vw
+            width: 100%
+            padding-left: 64px
 
 .case-study-item
     &__title
-        font-size: 1vw
-        margin-bottom: 0.2vw
+        font-size: 15px
+        line-height: 1.2em
+        margin-bottom: 5px
         text-transform: uppercase
         color: $red
         font-family: $fh
@@ -310,10 +333,13 @@ body
 
 .info-box
     background: rgba(255,255,255,0.75)
-    padding: 1.5vw
-    &__title
-        text-align: left
-        margin-bottom: 0.1vw
+    padding: 25px
+
+.case-study-grid
+    strong
+        font-family: $fbold
+        font-weight: 400
+        color: $red
 
 .info-box__section
     margin-bottom: 2vw
@@ -325,17 +351,20 @@ body
     list-style: none
     &__li
         position: relative
-        margin-bottom: 1vw
+        margin-bottom: 20px
         &:before
             content: ''
-            width: 0.6vw
-            height: 0.6vw
+            width: 8px
+            height: 8px
             position: absolute
-            left: -1.5vw
-            top: 0.35vw
+            left: -25px
+            top: 8px
             background-color: $red
         &:last-child
             margin-bottom: 0
+
+.red-text
+    color: $red
 
 .section4-main__title
     margin-bottom: 1vw
@@ -374,109 +403,137 @@ body
             text-decoration: underline
 
 
-@media screen and (max-width: 1280px)
-    .logo-link
-        font-size: 24px
+@media screen and (max-width: 1200px)
+    .container
+        width: 330px
 
-    .soc__item
-        font-size: 18px
-        margin-right: 10px
-        &:last-child
-            margin-right: 0
 
-    .section-flex__footer, .section-flex__header, .links-list
-        height: 54px
+    .title
+        &_fz_83
+            font-size: 58px
+            letter-spacing: 0.3px
 
-    .button
-        font-size: 16px
-        line-height: 50px
-        width: 175px
-
-    .title_fz5-2vw
-        font-size: 60px
-
-    .title_fz6-4vw
-        font-size: 70px
-
-    .title_fz1-6vw
-        font-size: 22px
-
-    .title_fz1-2vw
-        font-size: 18px
-
-    .section-first__logo-bl-top
-        font-size: 40px
-
-    .section-first__logo
-        font-size: 35px
-
-    .section-first__content-right
-        width: 175px
-
-    .st-text
-        font-size: 18px
+    .section-first__container
+        width: 350px
+        padding-bottom: 315px
+        padding-top: 100px
 
     .section-first__content
-        right: 3vw
-        width: 45vw
+        right: auto
+        left: 0
+        width: 100%
 
-    .container
-        width: 700px
-        padding: 0 15px
+    .section-first__content-left
+        margin-right: 0
+        position: absolute
+        right: 0
+        bottom: 215px
+        
+    .section-first__content-right
+        text-align: left
+        width: 180px
+
+    .st-text
+        font-size: 20px
+        line-height: 1.2em
+
+    .title_fz_103
+        font-size: 43px
+
+    .section2-main__title
+        margin-bottom: 30px
+
+    .title_fz_25
+        font-size: 18px
+        line-height: 1.33em
+        letter-spacing: 0.2px
+
+    .title_fz_18
+        font-size: 15px
+        line-height: 1.2em
+
 
     .grid-ul
-        font-size: 16px
-        margin-top: -18px
-        column-gap: 30px
-
-    .grid-ul__li
-        padding-left: 18px
-        padding-top: 18px
-        &:before
-            width: 10px
-            height: 10px
-            top: 22px
-            left: 0
-
-
-    .list-ul__li
-        &:before
-            left: -15px
-            top: 6px
-            width: 7px
-            height: 7px
+        font-size: 15px
+        column-count: 1
+        &__li
+            padding-left: 20px
+            &:before
+                width: 10px
+                height: 10px
+                top: 24px
 
     .section2-main__logo-img
-        width: 70%
+        width: 100%
 
-    .section3-main__logo-img
-        width: 80%
 
-    .case-study-item__title
-        font-size: 14px
+    .section3-main__logo
         margin-bottom: 5px
 
-    .case-study-grid
-        font-size: 14px
+    .section3-main__mobile-title
+        color: $red
+        .title__tablet-span
+            font-size: 25.5px
+            line-height: 1.53
+            letter-spacing: 0.3px
+            color: #000000
+            display: block
+            text-align: center
 
+
+    .case-study-grid
+        display: block
+
+    .section3-main__subtitle
+        margin-bottom: 20px
+
+    .info-box
+        padding: 20px
+
+    .case-study-grid
+        font-size: 10px
+        &__section
+            margin-bottom: 20px
+            width: 100%
+            padding: 0
+            &:last-child
+                margin-bottom: 0
+                padding-left: 20px
+
+    .list-ul__li
+        margin-bottom: 10px
+        &:before
+            width: 7px
+            height: 7px
+            left: -20px
+            top: 4px
+        &:last-child
+            margin-bottom: 0
 
     .form
-        font-size: 15px
+        display: block
+        padding: 20px 25px
+        &__line
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        &__section
+            width: 100%
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
 
     .st-input, .st-textarea
-        font-size: 15px
+        font-size: 12px
+        height: 32px
+        padding: 0 10px
 
-    .section5-main__title
-        font-size: 90px
-
-    .phone-mail__mail
-        font-size: 14px
-
-    .phone-mail__phone
-        font-size: 22px
+    .st-textarea
+        padding: 10px
+        height: 100px
 
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
     .button
         font-size: 12px
         width: 140px

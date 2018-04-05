@@ -13,8 +13,7 @@ html
             .links-list
                 .links-list__section
                     a(href='#firstSection').logo-link
-                        span.logo-link__bold hpc
-                        span.logo-link__italic hub
+                        object(type="image/svg+xml" data="../images/logo.svg").logo-link__icon
                 .links-list__section
                     nav.soc
                         a(href='#').soc__item.icon-facebook
@@ -25,20 +24,21 @@ html
                     .section-flex__header
                         a(href='#fourthSection').button начать работу
                     .section-flex__content
-                        h1.title.title_fz5-2vw.section-first__title openfoam
-                        .section-first__content
-                            .section-first__content-left
-                                .section-first__logo-bl
-                                    .section-first__logo-bl-top в облаке
-                                    .section-first__logo-bl-bottom
-                                        .section-first__logo.logo-link
-                                            span.logo-link__bold hpc
-                                            span.logo-link__italic hub
-                            .section-first__content-right
-                                .st-text
-                                    | виртуальный  суперкомпьютер с предустановленным и настроенным
-                                    |
-                                    strong OpenFOAM
+                        .section-first__container
+                            h1.title.title_fz_83.section-first__title openfoam
+                            .section-first__content
+                                .section-first__content-left
+                                    .section-first__logo-bl
+                                        .section-first__logo-bl-top в облаке
+                                        .section-first__logo-bl-bottom
+                                            .section-first__logo.logo-link
+                                                span.logo-link__bold hpc
+                                                span.logo-link__italic hub
+                                .section-first__content-right
+                                    .st-text
+                                        | виртуальный суперкомпьютер <br/> с предустановленным и настроенным
+                                        |
+                                        strong OpenFOAM
                     .section-flex__footer
                         a(href='#secondSection').button узнать больше
             .section
@@ -48,18 +48,18 @@ html
                     .section-flex__content.section2-main
                         .container
                             .section2-main__title
-                                h2.title.title_fz6-4vw openfoam 5.0
+                                h2.title.title_fz_103 openfoam 5.0
                             .section2-main__subtitle
-                                h3.title.title_fz1-6vw.title_black От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0
+                                h3.title.title_fz_25.title_black От 1 до 12 узлов Xeon E5-2680v2, 64GB RAM, IB FDR, </br> 1GbE shared Storage 120TB0
                             .section2-main__info
-                                .title.title_ttn.title_fz1-2vw.title_black
+                                .title.title_ttn.title_fz_18.title_black
                                     | Цена почасовая
                                     |
-                                    span.title__red 5.5 RUB
+                                    span.title__red-span 5.5 RUB
                                     |
                                     | (ядро*час) или
                                     |
-                                    span.title__red 2,640.00 RUB
+                                    span.title__red-span 2,640.00 RUB
                                     |
                                     | за один узел в сутки
                             .section2-main__list
@@ -82,7 +82,10 @@ html
                             .section3-main__logo
                                 img(src='images/img-logo2.png').section3-main__logo-img
                             .section3-main__subtitle
-                                h3.title.title_fz1-6vw.title_black РАСЧЕТ НА ПРИМЕРЕ CASE STUDY
+                                h3.title.title_fz_25.title_black.section3-main__mobile-title
+                                    span.title__tablet-span РАСЧЕТ
+                                    |
+                                    | НА ПРИМЕРЕ CASE STUDY
                             .section3-main__content
                                 .case-study-grid
                                     .case-study-grid__section
@@ -91,7 +94,11 @@ html
                                                 .case-study-item
                                                     .case-study-item__title Задача
                                                     .case-study-item__content
-                                                        | Компания Энергозапас решала в облаке HPC Hub с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
+                                                        | Компания Энергозапас решала в облаке
+                                                        |
+                                                        strong HPC Hub
+                                                        |
+                                                        | с применением пакета OpenFOAM задачу нахождения оптимальной формы гибкой оболочки ветрозащиты для здания высотой 300м.
                                                         button.case-study-item__content-close
                                             .info-box__section
                                                 .case-study-item
@@ -100,17 +107,21 @@ html
                                                         | Нахождение такой формы оболочки, при которой распределение давления по поверхности создавало бы определенную комбинацию горизонтальных и вертикальных усилий в верхней точке сооружения.
                                                         button.case-study-item__content-close
                                     .case-study-grid__section
-                                        .info-box__section
-                                            .case-study-item
-                                                .case-study-item__title Решение
-                                                .case-study-item__content
-                                                    ul.list-ul
-                                                        li.list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
-                                                        li.list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
-                                                        li.list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
-                                                        li.list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
-                                                        li.list-ul__li На кластере размером 3 узла задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
-                                                    button.case-study-item__content-close
+                                        .case-study-item
+                                            .case-study-item__title Решение
+                                            .case-study-item__content
+                                                ul.list-ul
+                                                    li.list-ul__li Решались уравнения Навье-Стокса для несжимаемой жидкости осреднённые по Рейнольдсу и замкнутые моделью турбулентности k-omega SST. На входной границе расчетной области задавался логарифмический профиль скорости.
+                                                    li.list-ul__li Расчетная сетка для разных случаев составляла от 3 млн ячеек до 4,5 млн ячеек.
+                                                    li.list-ul__li Размеры расчетной области 2,5км x 2,5км x 1км.
+                                                    li.list-ul__li Каждая задача решалась в стационарной и нестационарной постановке.
+                                                    li.list-ul__li
+                                                        | На кластере размером
+                                                        |
+                                                        strong 3 узла
+                                                        |
+                                                        | задача в стационарной постановке решалась за 5-6 часов, а нестационарной постановке 6-7 часов. Расчёт одного варианта составлял, в среднем, 12 часов и стоил 3,960 рублей.
+                                                button.case-study-item__content-close
 
                     .section-flex__footer
                         a(href='#fourthSection').button начать работу
@@ -119,12 +130,15 @@ html
                     .section-flex__content.section4-main
                         .container
                             .section4-main__title
-                                .title.title_fz1-6vw.title_black Заявка
+                                .title.title_fz_25.title_black Заявка
                             .section4-main__form
                                 .form
                                     .form__section
                                         .form__line.form-line
-                                            .form-line__info Важная информация </br> (без неё нам будет сложно)*
+                                            .form-line__info
+                                                span.form-line__info-mobile-bold Важная информация
+                                                | </br> (без неё нам будет сложно)
+                                                span.red-text *
                                             .form-line__content
                                                 input(type='text' placeholder='Имя').st-input
                                         .form__line.form-line
@@ -135,7 +149,9 @@ html
                                                 textarea(placeholder='Расскажите нам что-то про свои задачи (если хотите)').st-textarea
                                     .form__section
                                         .form__line.form-line
-                                            .form-line__info Неважная информация (но с ней всё будет намного быстрее)
+                                            .form-line__info
+                                                span.form-line__info-mobile-bold Неважная информация
+                                                    | </br> (но с ней всё будет намного быстрее)
                                             .form-line__content
                                                 input(type='text' placeholder='Кол-во вычислительных ядр').st-input
                                         .form__line.form-line
