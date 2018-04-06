@@ -12,8 +12,7 @@
     <canvas class="body__canvas"></canvas>
     <div class="body__links">
       <div class="links-list">
-        <div class="links-list__section"><a class="logo-link" href="#firstSection">
-            <object class="logo-link__icon" type="image/svg+xml" data="../images/logo.svg"></object></a></div>
+        <div class="links-list__section"><a class="logo-link" href="#firstSection"><img class="logo-link__img" src="./images/logo.svg"><img class="logo-link__img logo-link__img_hover" src="./images/logo-red.svg"></a></div>
         <div class="links-list__section">
           <nav class="soc"><a class="soc__item icon-facebook" href="#"></a><a class="soc__item icon-twitter" href="#"></a></nav>
         </div>
@@ -21,6 +20,7 @@
     </div>
     <div class="body__page" id="fullpage">
       <div class="section section-first">
+        <div class="section-first__bg" style="background-image: url(../images/first-bg.png)"></div>
         <div class="section-flex">
           <div class="section-flex__header"><a class="button" href="#fourthSection">начать работу</a></div>
           <div class="section-flex__content">
@@ -28,11 +28,12 @@
               <h1 class="title title_fz_83 section-first__title">openfoam</h1>
               <div class="section-first__content">
                 <div class="section-first__content-left">
-                  <div class="section-first__logo-bl">
-                    <div class="section-first__logo-bl-top">в облаке</div>
-                    <div class="section-first__logo-bl-bottom">
-                      <div class="section-first__logo logo-link"><span class="logo-link__bold">hpc</span><span class="logo-link__italic">hub</span></div>
-                    </div>
+                  <div class="section-first__logo-bl"><img class="section-first__logo-bl-img" src="./images/img-text1.png">
+                    <!--.section-first__logo-bl-top в облаке-->
+                    <!--.section-first__logo-bl-bottom-->
+                    <!--    .section-first__logo.logo-link-->
+                    <!--        span.logo-link__bold hpc-->
+                    <!--        span.logo-link__italic hub-->
                   </div>
                 </div>
                 <div class="section-first__content-right">
@@ -47,7 +48,9 @@
           <div class="section-flex__footer"><a class="button" href="#secondSection">узнать больше</a></div>
         </div>
       </div>
-      <div class="section">
+      <div class="section section-second">
+        <div class="section-second__bg-left" style="background-image: url(../images/second-screen-graph-left.png)"></div>
+        <div class="section-second__bg-right" style="background-image: url(../images/second-screen-graph-right.png)"></div>
         <div class="section-flex">
           <div class="section-flex__header"><a class="button" href="#fourthSection">начать работу</a></div>
           <div class="section-flex__content section2-main">
@@ -82,7 +85,9 @@
           <div class="section-flex__footer"><a class="button" href="#thirdSection">читать case study</a></div>
         </div>
       </div>
-      <div class="section">
+      <div class="section section-three">
+        <div class="section-three__bg-left" style="background-image: url(../images/third-screen-graph-left.png)"></div>
+        <div class="section-three__bg-right" style="background-image: url(../images/third-screen-graph-right.png)"></div>
         <div class="section-flex">
           <div class="section-flex__header"></div>
           <div class="section-flex__content section3-main">
@@ -144,7 +149,8 @@
           <div class="section-flex__footer"><a class="button" href="#fourthSection">начать работу</a></div>
         </div>
       </div>
-      <div class="section">
+      <div class="section section-four">
+        <div class="section-four__bg" style="background-image: url(../images/first-bg.png)"></div>
         <form class="section-flex">
           <div class="section-flex__content section4-main">
             <div class="container">
@@ -199,14 +205,13 @@
           </div>
         </form>
       </div>
-      <div class="section">
+      <div class="section section-five">
+        <div class="section-five__bg" style="background-image: url(../images/first-bg.png)"></div>
         <div class="section-flex">
           <div class="section-flex__content">
-            <div class="section5-main">
-              <div class="section5-main__title logo-link"><span class="logo-link__bold">hpc</span><span class="logo-link__italic">hub</span></div>
-              <div class="section5-main__footer">
-                <div class="phone-mail"><a class="phone-mail__mail" href="mailto:info@hpchub.net">mail: info@hpchub.net</a><a class="phone-mail__phone" href="tel:+7 495 008 6194">+7 495 008 6194</a></div>
-              </div>
+            <div class="section-five__content">
+              <div class="section-five__logo"><img class="section-five__logo-img" src="./images/logo-red.svg"></div>
+              <div class="section-five__contacts"><img class="section-five__contacts-img" src="./images/contacts-img.png"></div>
             </div>
           </div>
         </div>

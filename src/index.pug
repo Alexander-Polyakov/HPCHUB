@@ -13,13 +13,15 @@ html
             .links-list
                 .links-list__section
                     a(href='#firstSection').logo-link
-                        object(type="image/svg+xml" data="../images/logo.svg").logo-link__icon
+                        img(src='./images/logo.svg').logo-link__img
+                        img(src='./images/logo-red.svg').logo-link__img.logo-link__img_hover
                 .links-list__section
                     nav.soc
                         a(href='#').soc__item.icon-facebook
                         a(href='#').soc__item.icon-twitter
         .body__page#fullpage
             .section.section-first
+                .section-first__bg(style='background-image: url(../images/first-bg.png)')
                 .section-flex
                     .section-flex__header
                         a(href='#fourthSection').button начать работу
@@ -29,11 +31,12 @@ html
                             .section-first__content
                                 .section-first__content-left
                                     .section-first__logo-bl
-                                        .section-first__logo-bl-top в облаке
-                                        .section-first__logo-bl-bottom
-                                            .section-first__logo.logo-link
-                                                span.logo-link__bold hpc
-                                                span.logo-link__italic hub
+                                        img(src='./images/img-text1.png').section-first__logo-bl-img
+                                        //.section-first__logo-bl-top в облаке
+                                        //.section-first__logo-bl-bottom
+                                        //    .section-first__logo.logo-link
+                                        //        span.logo-link__bold hpc
+                                        //        span.logo-link__italic hub
                                 .section-first__content-right
                                     .st-text
                                         | виртуальный суперкомпьютер <br/> с предустановленным и настроенным
@@ -41,7 +44,9 @@ html
                                         strong OpenFOAM
                     .section-flex__footer
                         a(href='#secondSection').button узнать больше
-            .section
+            .section.section-second
+                .section-second__bg-left(style='background-image: url(../images/second-screen-graph-left.png)')
+                .section-second__bg-right(style='background-image: url(../images/second-screen-graph-right.png)')
                 .section-flex
                     .section-flex__header
                         a(href='#fourthSection').button начать работу
@@ -73,10 +78,11 @@ html
                                 img(src='images/img-logo1.png').section2-main__logo-img
                     .section-flex__footer
                         a(href='#thirdSection').button читать case study
-            .section
+            .section.section-three
+                .section-three__bg-left(style='background-image: url(../images/third-screen-graph-left.png)')
+                .section-three__bg-right(style='background-image: url(../images/third-screen-graph-right.png)')
                 .section-flex
                     .section-flex__header
-
                     .section-flex__content.section3-main
                         .container
                             .section3-main__logo
@@ -125,7 +131,8 @@ html
 
                     .section-flex__footer
                         a(href='#fourthSection').button начать работу
-            .section
+            .section.section-four
+                .section-four__bg(style='background-image: url(../images/first-bg.png)')
                 form.section-flex
                     .section-flex__content.section4-main
                         .container
@@ -162,15 +169,14 @@ html
                                                 textarea(placeholder='Расскажите нам, что бы вы ещё хотели иметь на вашем кластере? ОС? ПО? Библиотеки? Встроенная кофемашина?').st-textarea
                     .section-flex__footer
                         button.button ОТПРАВИТЬ ЗАЯВКУ
-            .section
+            .section.section-five
+                .section-five__bg(style='background-image: url(../images/first-bg.png)')
                 .section-flex
                     .section-flex__content
-                        .section5-main
-                            .section5-main__title.logo-link
-                                span.logo-link__bold hpc
-                                span.logo-link__italic hub
-                            .section5-main__footer
-                                .phone-mail
-                                    a(href='mailto:info@hpchub.net').phone-mail__mail mail: info@hpchub.net
-                                    a(href='tel:+7 495 008 6194').phone-mail__phone +7 495 008 6194
+                        .section-five__content
+                            .section-five__logo
+                                img(src='./images/logo-red.svg').section-five__logo-img
+                            .section-five__contacts
+                                img(src='./images/contacts-img.png').section-five__contacts-img
+
         include pug/scripts.pug
