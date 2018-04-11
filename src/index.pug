@@ -67,12 +67,16 @@ html
                                     |
                                     | за один узел в сутки
                             .section2-main__list
-                                ul.grid-ul
-                                    li.grid-ul__li Кластер доступен к работе в течение 30 минут
-                                    li.grid-ul__li Никакой настройки: ПО профессионально настроено и готово к работе
-                                    li.grid-ul__li Почасовая тарификация
-                                    li.grid-ul__li Поддержка 24x7: мы ответим на любые вопросы и при необходимости поможем с адаптацией окружения под ваши задачи
-                                    li.grid-ul__li Отсутствие оплаты за простой
+                                .list-grid
+                                    .list-grid__section
+                                        ul.grid-ul
+                                            li.grid-ul__li Кластер доступен к работе в течение 30 минут
+                                            li.grid-ul__li Никакой настройки: ПО профессионально настроено и готово к работе
+                                            li.grid-ul__li Почасовая тарификация
+                                    .list-grid__section
+                                        ul.grid-ul.grid-ul_v2
+                                            li.grid-ul__li Поддержка 24x7: мы <br/> ответим на любые вопросы <br/> и при необходимости <br/> поможем с адаптацией <br/> окружения под ваши задачи
+                                            li.grid-ul__li Отсутствие оплаты за простой
                             .section2-main__footer
                                 img(src='images/img-logo1.png').section2-main__logo-img
                     .section-flex__footer
@@ -131,7 +135,7 @@ html
                     .section-flex__footer
                         a(href='#fourthSection').button начать работу
             .section.section-four
-                .section-four__bg(style='background-image: url(./images/first-bg.png)')
+                .section-four__bg(style='background-image: url(./images/four-screen-bg.png)')
                 form.section-flex
                     .section-flex__content.section4-main
                         .container
@@ -176,6 +180,8 @@ html
                             .section-five__logo
                                 img(src='./images/logo-red.svg').section-five__logo-img
                             .section-five__contacts
-                                img(src='./images/contacts-img.png').section-five__contacts-img
+                                .contacts
+                                    a(href='mailto:INFO@HPCHUB.NET').contacts__mail MAIL: INFO@HPCHUB.NET
+                                    a(href='tel: +7 495 008 6194').contacts__phone +7 495 008 6194
 
         include pug/scripts.pug
