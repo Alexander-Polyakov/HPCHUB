@@ -17,10 +17,12 @@
 +font-face('FuturaHeavy', '../fonts/FuturaPT-Heavy')
 +font-face('FuturaBold', '../fonts/FuturaPT-Bold')
 +font-face('FuturaBook', '../fonts/FuturaPT-Book')
++font-face('futuraptlight', '../fonts/futuraptlight')
 +font-face('FuturaBookOblique', '../fonts/futuraptbookoblique')
 
 
 $fh: 'FuturaHeavy'
+$flight: 'futuraptlight'
 $fbold: 'FuturaBold'
 $fbook: 'FuturaBook'
 $fbooko: 'FuturaBookOblique'
@@ -107,7 +109,7 @@ body
     font-family: $fbold
     text-align: center
     &_fz_83
-        font-size: 83px
+        font-size: 88px
         letter-spacing: 0.4px
     &_fz_103
         font-size: 100px
@@ -139,32 +141,37 @@ body
         background-size: 100% auto
         background-repeat: no-repeat
         z-index: 1
-        background-position: 0 -30%
+        background-position: 0 -40%
     &__container
-        width: 900px
-        padding: 120px 0
+        display: inline-block
+        vertical-align: middle
+        padding: 100px 0
         position: relative
-    &__content
+    &__bottom-content
         position: absolute
         right: 0
         bottom: 0
-        display: flex
-        align-items: flex-end
-        justify-content: space-between
-    &__content-left
-        margin-right: 85px
-    &__content-right
+    &__top-content
+        font-size: 21px
+        font-family: $fbook
         color: $red
-        width: 126px
-        text-align: right
-    &__logo-bl-top
-        font-size: 3vw
-        line-height: 0.8em
+        line-height: 1em
+        position: absolute
+        left: 0
+        top: 45px
+
+.cloud
+    &__top-text
+        font-size: 45px
+        line-height: 1em
+        font-family: $flight
+        margin-bottom: 5px
         color: $red
         font-style: italic
-    &__logo-bl-bottom
-        padding-left: 4vw
-
+    &__logo
+        width: 170px
+        height: 30px
+        margin-left: 40px
 
 .st-text
     font-size: 14px
@@ -423,11 +430,6 @@ body
         &:hover
             text-decoration: underline
 
-.section-first__logo-bl
-    width: 190px
-    &-img
-        width: 100%
-
 .section-second
     &__bg-left
         height: 100%
@@ -499,7 +501,7 @@ body
         height: 100%
         -webkit-background-size: 100% auto
         background-size: 100% auto
-        background-position: top
+        background-position: 0 -40%
         background-repeat: no-repeat
 
 
