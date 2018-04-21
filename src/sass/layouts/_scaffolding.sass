@@ -258,6 +258,7 @@ body
 
 
 
+
 .form
     background: rgba(255,255,255,0.75)
     padding: 40px 30px
@@ -528,6 +529,29 @@ body
             text-decoration: underline 
 
 @media screen and (max-width: 1200px)
+    .section-first__top-content
+        font-size: 18px
+
+    .list-grid
+        display: block
+        &__section
+            width: 100%
+
+    .grid-ul
+        font-size: 15px
+        &__li
+            &:before
+                width: 10px
+                height: 10px
+                top: 3px
+        &_v2
+            margin-top: 0
+            .grid-ul__li
+                margin-top: 20px
+        br
+            display: none
+
+
     .section-second__bg-left
         width: 25%
 
@@ -541,8 +565,9 @@ body
 
     .section-first__container
         width: 350px
-        padding-bottom: 315px
-        padding-top: 100px
+
+    .section-first__bg
+        background-position: center 0
 
     .section-first__content
         right: auto
@@ -566,11 +591,8 @@ body
     .title_fz_103
         font-size: 43px
 
-    .section2-main__title
-        margin-bottom: 30px
-
     .title_fz_25
-        font-size: 18px
+        font-size: 16px
         line-height: 1.33em
         letter-spacing: 0.2px
 
@@ -578,40 +600,30 @@ body
         font-size: 15px
         line-height: 1.2em
 
-
-    .grid-ul
-        font-size: 15px
-        column-count: 1
-        &__li
-            padding-left: 20px
-            &:before
-                width: 10px
-                height: 10px
-                top: 24px
-
     .section2-main__logo-img
         width: 100%
 
-
     .section3-main__logo
-        margin-bottom: 5px
+        display: none
 
     .section3-main__mobile-title
         color: $red
         .title__tablet-span
-            font-size: 25.5px
-            line-height: 1.53
+            font-size: 22px
+            line-height: 1.53em
             letter-spacing: 0.3px
             color: #000000
             display: block
             text-align: center
 
+    .case-study-item__title
+        font-size: 12px
 
     .case-study-grid
         display: block
 
     .section3-main__subtitle
-        margin-bottom: 20px
+        margin-bottom: 10px
 
     .info-box
         padding: 20px
@@ -619,7 +631,7 @@ body
     .case-study-grid
         font-size: 10px
         &__section
-            margin-bottom: 20px
+            margin-bottom: 10px
             width: 100%
             padding: 0
             &:last-child
@@ -698,11 +710,28 @@ body
         height: 40px
         right: 0
 
+    .section-five__bg, .section-four__bg, .section-first__bg
+        -webkit-background-size: cover
+        background-size: cover
+        background-position: center
 
 @media screen and (max-width: 400px)
+
+    .section2-main__subtitle
+        margin-bottom: 10px
+
     .section-first__container
         width: 260px
-        padding: 100px 0 250px
+
+    .cloud__top-text
+        font-size: 30px
+
+    .cloud__logo
+        width: 120px
+
+    .section-first__top-content
+        width: 190px
+        top: 0
 
     .section-flex__footer, .section-flex__header
         height: 40px
@@ -727,11 +756,9 @@ body
     .links-list__section:last-child
         display: none
 
-
     .links-list__section:first-child
         height: 40px
         line-height: 40px
-
 
     .container
         width: 260px
@@ -740,7 +767,7 @@ body
         font-size: 34px
 
     .section2-main__title
-        margin-bottom: 20px
+        margin-bottom: 10px
 
     .title_fz_25
         line-height: 1.6em
@@ -752,18 +779,27 @@ body
     .section2-main__info .title
         font-family: $fbook
 
+    .case-study-grid
+        font-size: 12px
 
     .grid-ul
         font-size: 12px
         line-height: 1.5em
-        margin-top: -15px
+        margin-top: -5px
         &__li
-            padding-top: 15px
+            margin-top: 5px
+            padding-left: 20px
             &:before
                 width: 8px
                 height: 8px
-                top: 20px
+                top: 6px
+    .st-textarea
+        height: 190px
 
+    .grid-ul_v2
+        margin-top: 0
+        .grid-ul__li
+            margin-top: 5px
 
     .section2-main__list
         margin-bottom: 20px
@@ -906,3 +942,9 @@ body
 
     .section-five__contacts
         width: 100%
+
+    .contacts__mail
+        font-size: 14px
+
+    .contacts__phone
+        font-size: 24px
